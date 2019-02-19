@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tickets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="styles/main.css">
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <div class="content">
+        <div class="widget">
+            <nav role="navigation">
+                <ul class="navbar">
+                    <li><a class="active" href="/tickets"><i class="fas fa-plane"></i>TICKETS</a></li>
+                    <li><a href="/hotels"><i class="fas fa-building"></i>HOTEL</a></li>
+                    <li><a href="/rentacar"><i class="fas fa-car"></i>CAR RENT</a></li>
+                    <li><a href="/insurance"><i class="fas fa-briefcase-medical"></i>INSURANCE</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section class="tickets">
+                    <form action="">
+
+                        <div class="flight-data">
+                            <div>
+                                <div class="input-city">
+                                    <span><i class="fas fa-map-marker-alt"></i>Find me</span>
+                                    <input id="origin" name="origin" type="text" placeholder=" text ...">
+                                </div>
+                                <div class="input-city">
+                                    <span>City<i class="fas fa-caret-down"></i></span>
+                                    <input id="destination" name="destination" type="text" placeholder=" text ...">
+                                </div>
+                            </div>
+                            <div class="date">
+                                <span class="top"><i class="fas fa-plane"></i></span>
+                                <input id="flight-date" type="date" placeholder="Flight date">
+                                <span class="bottom"><i class="fas fa-plane"></i></span>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="flight-details">
+                            <div>
+                                <div class="select-passenger">
+                                    <i class="fas fa-user-tie"></i>
+                                    <select name="adults" id="adults">
+                                        <option value="0">0</option>
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                    </select>
+                                </div>
+                                <div class="select-passenger">
+                                    <i class="fas fa-child"></i>
+                                    <select name="kids" id="kids">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                    </select>
+                                </div>
+                                <div class="select-passenger">
+                                    <i class="fas fa-baby"></i>
+                                    <select name="baby" id="baby">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                    </select>
+                                </div>
+                                <select name="class" id="class">
+                                    <option value="Economy">Economy class</option>
+                                    <option value="">Business class</option>
+                                    <option value="">VIP class</option>
+                                </select>
+                            </div>
+                            <div class="show-hotels">
+                                <input type="checkbox" name="hotels" id="hotels">
+                                <label for="hotels">Show hotels</label>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-flight"><i class="fas fa-plus"></i>Add another flight</button>
+                            <button class="find-btn" type="submit">Find tickets</button>
+                        </div>
+                        
+                    </form>
+                </section>
+                
+                <section class="hotels">
+                    <form action="">
+                        <div class="">
+                            <div>
+                                <input type="text">
+                                <input type="text">
+                            </div>
+                            <div>
+                                <input id="date" type="date" placeholder="Flight date">
+                            </div>
+                    
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div class="background"></div>
+</body>
+</html>
