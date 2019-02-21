@@ -9,6 +9,7 @@ input{
     padding: 0 6px;
 }
 .content{
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +17,8 @@ input{
 }
 .content .widget{
     width: 60%;
+    min-width: 615px;
+    max-width: 750px;
 }
 .background{
     top: 0;
@@ -24,7 +27,7 @@ input{
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url(../images/golden-gate-backgroud.jpg);
+    background-image: url(../images/golden-gate.jpg);
     filter: blur(8px);
     background-size: cover;
 }
@@ -44,27 +47,38 @@ input{
     text-align: center;
     display: block;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     color: #283d3e;
 }
 .navbar>li:nth-child(1) a i {
     transform: rotate(-45deg);
 }
+.navbar>li:nth-child(2) a{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.navbar>li:nth-child(3) a{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.navbar>li:nth-child(4) a{
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
 .navbar li>.active{
     background-color: #283d3e;
     color: #c3ebe3;
-    border-top: 5px solid #e98f77;
-    border-radius: 4px 4px 0 0;
+    border-top: 8px solid #e98f77;
+    border-radius: 5px 5px 0 0;
 }
 /*==================== Forms ===================*/
 main{
     background-color: #283d3e;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 8px 8px;
+}
+#tickets-form.hidden{
+    display: none;
 }
 .tickets{
-    padding: 20px;
+    padding: 40px 30px;
 }
 .tickets form
 {
@@ -72,11 +86,16 @@ main{
     flex-direction: column;
 }
 .tickets input {
-    border-radius: 5px;
+    border-radius: 8px;
 }
 .tickets input[type=checkbox]
 {
     display: inline-block;
+}
+.tickets h2
+{
+    text-align: center;
+    color:#c2eae2;
 }
 /*==================== flight data ====================*/
 .tickets .flight-data{
@@ -87,7 +106,7 @@ main{
 }
 .tickets .flight-data input{
     box-sizing: border-box;
-    padding: 10px 5px;
+    padding: 15px 70px 15px 10px;
     width: 100%;
     border: none;
     box-shadow: inset -1px 1px 6px #9a9a9a; 
@@ -105,13 +124,16 @@ main{
     position: relative;
     font-size: 20px;
 }
+.tickets .flight-data .input-city input:required:valid{
+    /* insert your own styles for invalid form input */
+}
 .tickets .flight-data .input-city:nth-child(1) {
     margin: 0 0 20px 0;
 }
 .tickets .flight-data .input-city span{
     font-size: 12px;
     position: absolute;
-    top:13px;
+    top:18px;
     right: 5px;
     z-index: 3;
     color: #9a9a9a;
@@ -148,6 +170,7 @@ main{
 }
 
 .tickets .flight-data #flight-date{
+    padding: 10px 5px;
     margin: 0;
     box-shadow: none;
     border: 3px solid #16b595;
@@ -163,6 +186,7 @@ main{
     
 }
 .tickets .flight-details select{
+    font-size: 17px;
     background-image: linear-gradient(to bottom, #58726f 0%, #1c2628 100%);
     border-radius: 8px;
     padding: 5px;
@@ -192,7 +216,7 @@ main{
 }
 .tickets .flight-details .select-passenger i{
     position: absolute;
-    top: 5px;
+    top: 8px;
 
 }
 .tickets .flight-details .select-passenger select{
@@ -252,7 +276,6 @@ main{
     border-image-slice: 1;
     border-width: 1px;
 }
-
 
 .hotels{
     display: none;
